@@ -1,0 +1,13 @@
+# Goreleaser-compatible SUSE-based image
+# Binary is built externally and copied in
+FROM registry.suse.com/bci/bci-micro:latest
+
+LABEL org.opencontainers.image.source="https://github.com/manno/config-reloader"
+LABEL org.opencontainers.image.vendor="SUSE Rancher"
+
+# Copy pre-built binary (from goreleaser build or local build)
+COPY config-reloader /usr/local/bin/config-reloader
+
+USER 65532:65532
+
+ENTRYPOINT ["/usr/local/bin/config-reloader"]

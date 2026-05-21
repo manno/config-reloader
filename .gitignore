@@ -7,3 +7,13 @@ manifest-tool
 test/
 bin/
 .idea/
+
+# Goreleaser / build outputs
+dist/
+*.tar.gz
+config-reloader
+.envrc
+go.work.sum
+*.swp
+*.swo
+*~
