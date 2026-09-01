@@ -1,6 +1,7 @@
 module github.com/banzaicloud/config-reloader
 
 go 1.23.5
+toolchain go1.27.0
 
 require (
 	github.com/fsnotify/fsnotify v1.8.0
